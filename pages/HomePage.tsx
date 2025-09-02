@@ -10,7 +10,7 @@ import {
 
 const HomePage: React.FC = () => {
   return (
-    <div className="text-gray-800 bg-white">
+    <div className="text-gray-800">
       <HeroSection />
       <ServicesSection />
       <StatsBand />
@@ -23,21 +23,21 @@ const HomePage: React.FC = () => {
 };
 
 const HeroSection: React.FC = () => (
-    <section className="bg-white py-16 md:py-24">
+    <section className="bg-primary text-white py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="h-full min-h-[400px] bg-cover bg-center rounded-lg" style={{ backgroundImage: "url('https://picsum.photos/800/900')" }}>
+                <div className="h-full min-h-[400px] md:min-h-[500px] bg-cover bg-center rounded-lg" style={{ backgroundImage: "url('https://picsum.photos/800/900')" }}>
                     {/* Image part */}
                 </div>
                 <div className="flex flex-col justify-center">
                     <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">Largest Design + Build Company in Kumaon</h1>
-                    <ul className="mt-6 space-y-3 text-lg text-gray-700">
-                        <li className="flex items-start"><span className="text-primary mr-3 mt-1">&#8226;</span>89 Homes Delivered, 59 Under Execution currently.</li>
-                        <li className="flex items-start"><span className="text-primary mr-3 mt-1">&#8226;</span>A team of 35+ architects and 70+ civil engineering employees.</li>
-                        <li className="flex items-start"><span className="text-primary mr-3 mt-1">&#8226;</span>Our clients like us for transparency and complete budget clarity before construction starts.</li>
+                    <ul className="mt-6 space-y-3 text-lg text-gray-200">
+                        <li className="flex items-start"><span className="text-accent mr-3 mt-1">&#8226;</span>89 Homes Delivered, 59 Under Execution currently.</li>
+                        <li className="flex items-start"><span className="text-accent mr-3 mt-1">&#8226;</span>A team of 35+ architects and 70+ civil engineering employees.</li>
+                        <li className="flex items-start"><span className="text-accent mr-3 mt-1">&#8226;</span>Our clients like us for transparency and complete budget clarity before construction starts.</li>
                     </ul>
                     <div className="mt-8">
-                        <ContactButton variant="primary">
+                        <ContactButton variant="accent">
                             Schedule a meeting
                         </ContactButton>
                     </div>
@@ -48,10 +48,10 @@ const HeroSection: React.FC = () => (
 );
 
 const ServicesSection: React.FC = () => (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-16 md:py-24 bg-accent">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
             <div className="text-center">
-                <h2 className="text-3xl md:text-4xl font-bold">Our Services</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -59,8 +59,8 @@ const ServicesSection: React.FC = () => (
                     <img src="https://picsum.photos/800/600?random=service1" alt="Turnkey Services" className="w-full h-full object-cover rounded-lg shadow-md"/>
                 </div>
                 <div>
-                    <h3 className="text-2xl font-bold text-black">Turnkey Services</h3>
-                    <p className="mt-4 text-gray-700">Do you have a plot and want to build a villa or floors by investing your own money? We will design and build it for you for a pre-decided all inclusive price in a fixed time line, and with warranty too. This is our most popular service with 82 homes delivered and 49 under execution.</p>
+                    <h3 className="text-2xl font-bold text-gray-900">Turnkey Services</h3>
+                    <p className="mt-4 text-gray-800">Do you have a plot and want to build a villa or floors by investing your own money? We will design and build it for you for a pre-decided all inclusive price in a fixed time line, and with warranty too. This is our most popular service with 82 homes delivered and 49 under execution.</p>
                     <div className="mt-6">
                         <ContactButton variant="outline">Know more</ContactButton>
                     </div>
@@ -72,8 +72,8 @@ const ServicesSection: React.FC = () => (
                     <img src="https://picsum.photos/800/600?random=service2" alt="Plot Collaboration" className="w-full h-full object-cover rounded-lg shadow-md"/>
                 </div>
                 <div className="md:order-1">
-                    <h3 className="text-2xl font-bold">Plot Collaboration</h3>
-                    <p className="mt-4 text-gray-700">Do you have a plot and want to build floors but do not want to invest your money? We will design and build it for you and take a floor(s) in return.</p>
+                    <h3 className="text-2xl font-bold text-gray-900">Plot Collaboration</h3>
+                    <p className="mt-4 text-gray-800">Do you have a plot and want to build floors but do not want to invest your money? We will design and build it for you and take a floor(s) in return.</p>
                     <div className="mt-6">
                         <ContactButton variant="outline">Know more</ContactButton>
                     </div>
@@ -85,17 +85,17 @@ const ServicesSection: React.FC = () => (
 
 
 const StatsBand: React.FC = () => (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Largest Home Builder in Kumaon</h2>
-            <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">We are the largest home construction company in Kumaon, specializing in custom villas, simplex-duplexes, and independent floors. With 89 homes delivered and 59 under construction, our expertise spans different home styles and plot sizes.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Largest Home Builder in Kumaon</h2>
+            <p className="mt-4 text-lg text-gray-200 max-w-3xl mx-auto">We are the largest home construction company in Kumaon, specializing in custom villas, simplex-duplexes, and independent floors. With 89 homes delivered and 59 under construction, our expertise spans different home styles and plot sizes.</p>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div className="bg-white p-8 rounded-lg text-center border">
-                    <p className="text-7xl lg:text-8xl font-extrabold text-primary">89</p>
+                <div className="bg-accent p-8 rounded-lg text-center shadow-lg">
+                    <p className="text-7xl lg:text-8xl font-extrabold text-gray-900">89</p>
                     <p className="mt-2 text-xl font-medium text-gray-900">Homes Delivered</p>
                 </div>
-                <div className="bg-white p-8 rounded-lg text-center border">
-                    <p className="text-7xl lg:text-8xl font-extrabold text-primary">59</p>
+                <div className="bg-accent p-8 rounded-lg text-center shadow-lg">
+                    <p className="text-7xl lg:text-8xl font-extrabold text-gray-900">59</p>
                     <p className="mt-2 text-xl font-medium text-gray-900">Homes Under Design/Construction</p>
                 </div>
             </div>
@@ -112,15 +112,15 @@ const ProjectsHighlightSection: React.FC = () => {
     ];
 
     return (
-        <section className="py-16 md:py-24 bg-gray-50">
+        <section className="py-16 md:py-24 bg-accent">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 className="text-3xl md:text-4xl font-bold">See Our Projects</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">See Our Projects</h2>
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {projectTypes.map(project => (
                         <div key={project.name} className="group">
                             <a href="#/projects" className="block">
                                 <img src={project.imageUrl} alt={project.name} className="w-48 h-48 rounded-full mx-auto object-cover shadow-lg transform group-hover:scale-105 transition-transform duration-300" loading="lazy" />
-                                <h3 className="mt-6 text-xl font-semibold group-hover:text-primary transition-colors">{project.name}</h3>
+                                <h3 className="mt-6 text-xl font-semibold text-gray-900 group-hover:text-primary transition-colors">{project.name}</h3>
                             </a>
                         </div>
                     ))}
@@ -153,16 +153,16 @@ const ReasonsSection: React.FC = () => {
     const reasonsToShow = showAll ? REASONS_TO_LOVE_US : REASONS_TO_LOVE_US.slice(0, 8);
 
     return (
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-24 bg-primary text-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-black">12 Reasons Why You Will Love Us</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center">12 Reasons Why You Will Love Us</h2>
                 <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
                     {reasonsToShow.map((reason) => (
                         <div key={reason.title} className="text-center">
-                            <div className="w-20 h-20 mx-auto flex items-center justify-center bg-gray-100 rounded-full">
-                                {getReasonIcon(reason.title, "w-10 h-10 text-primary")}
+                            <div className="w-20 h-20 mx-auto flex items-center justify-center bg-white/20 rounded-full">
+                                {getReasonIcon(reason.title, "w-10 h-10 text-accent")}
                             </div>
-                            <h3 className="mt-6 font-semibold text-lg text-black">{reason.title}</h3>
+                            <h3 className="mt-6 font-semibold text-lg">{reason.title}</h3>
                         </div>
                     ))}
                 </div>
@@ -170,7 +170,7 @@ const ReasonsSection: React.FC = () => {
                     <div className="mt-16 text-center">
                         <button
                             onClick={() => setShowAll(true)}
-                            className="inline-flex items-center justify-center px-8 py-3 border border-primary text-base font-medium rounded-md text-primary bg-transparent hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-300"
+                            className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-800 bg-accent hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition-colors duration-300"
                         >
                             Explore All Reasons
                         </button>
@@ -182,13 +182,13 @@ const ReasonsSection: React.FC = () => {
 };
 
 const RemoteBuildSection: React.FC = () => (
-    <section className="py-16 md:py-24 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://picsum.photos/1600/800?random=remote')"}}>
+    <section className="py-16 md:py-24 bg-accent">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white p-12 rounded-lg shadow-xl max-w-4xl mx-auto text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-black">Away from Kumaon?</h2>
                  <p className="mt-4 text-xl text-gray-700">30+ families built their homes while living away — you can too!</p>
                 <p className="mt-4 max-w-3xl mx-auto text-gray-600">Whether you are an NRI, a frequent traveler, or living outside Kumaon, we ensure that distance does not stop you from building your dream home. With us, 30+ clients have successfully managed their home construction remotely while we handled every detail.</p>
-                <h3 className="mt-8 text-xl font-bold">How we make it easy for you:</h3>
+                <h3 className="mt-8 text-xl font-bold text-gray-900">How we make it easy for you:</h3>
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {[
                         "Video calls for detailed design meetings",
@@ -207,9 +207,9 @@ const RemoteBuildSection: React.FC = () => (
 );
 
 const ReviewsSection: React.FC = () => (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-16 md:py-24 bg-primary">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-black mb-12">What Our Customers Are Saying</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">What Our Customers Are Saying</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {REVIEWS.map((review, index) => (
                      <div key={index} className="bg-white p-8 rounded-lg shadow-md flex flex-col border border-gray-200 relative">

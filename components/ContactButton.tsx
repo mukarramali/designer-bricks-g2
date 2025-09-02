@@ -1,9 +1,10 @@
+
 import React from 'react';
 import { WHATSAPP_LINK } from '../constants';
 import { WhatsAppIcon } from './icons';
 
 interface ContactButtonProps {
-    variant?: 'primary' | 'secondary' | 'outline';
+    variant?: 'primary' | 'secondary' | 'outline' | 'accent';
     children?: React.ReactNode;
 }
 
@@ -13,7 +14,8 @@ export const ContactButton: React.FC<ContactButtonProps> = ({ variant = 'primary
   const styles = {
     primary: "text-white bg-primary border-transparent hover:opacity-90 focus:ring-primary",
     secondary: "text-white bg-black border-transparent hover:bg-gray-800 focus:ring-black",
-    outline: "text-primary bg-transparent border-primary hover:bg-primary hover:text-white focus:ring-primary"
+    outline: "text-primary bg-transparent border-primary hover:bg-primary hover:text-white focus:ring-primary",
+    accent: "text-gray-800 bg-accent border-transparent hover:opacity-90 focus:ring-accent"
   };
 
   const showIcon = variant === 'primary' && !children;

@@ -12,9 +12,6 @@ const Header: React.FC<HeaderProps> = ({ currentRoute }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  const leftLinks = NAV_LINKS.slice(0, 2);
-  const rightLinks = NAV_LINKS.slice(2, 4);
-
   useEffect(() => {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 10);
@@ -28,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ currentRoute }) => {
   }, [currentRoute]);
   
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${hasScrolled ? 'shadow-md' : ''}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${hasScrolled ? 'shadow-lg' : ''}`}>
       {/* Top Bar */}
       <div className="bg-gray-100 text-gray-600 text-sm hidden lg:block">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-2">
@@ -45,33 +42,13 @@ const Header: React.FC<HeaderProps> = ({ currentRoute }) => {
         </div>
       </div>
 
-      {/* Main Navigation */}
+      {/* Logo Area */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          
-          <nav className="hidden lg:flex items-center space-x-8">
-            {leftLinks.map((link) => (
-              <a key={link.href} href={link.href} className={`text-lg font-medium transition-colors duration-300 ${ currentRoute === link.href ? 'text-primary' : 'text-gray-700 hover:text-primary' }`}>
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          <div className="flex-shrink-0">
-            <a href="#/" className="text-2xl font-bold tracking-wider text-black">
-              {BRAND_NAME}
-            </a>
-          </div>
-          
-          <nav className="hidden lg:flex items-center space-x-8">
-             {rightLinks.map((link) => (
-              <a key={link.href} href={link.href} className={`text-lg font-medium transition-colors duration-300 ${ currentRoute === link.href ? 'text-primary' : 'text-gray-700 hover:text-primary' }`}>
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          <div className="lg:hidden">
+        <div className="relative flex h-20 items-center justify-center">
+          <a href="#/" className="text-2xl font-bold tracking-wider text-black">
+            {BRAND_NAME}
+          </a>
+          <div className="absolute right-0 lg:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu" className="text-gray-700 p-2">
               {isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
             </button>
@@ -79,6 +56,23 @@ const Header: React.FC<HeaderProps> = ({ currentRoute }) => {
         </div>
       </div>
       
+      {/* Desktop Navigation */}
+       <nav className="hidden lg:flex bg-accent text-gray-800">
+          <div className="container mx-auto flex justify-center">
+              {NAV_LINKS.map((link) => (
+                  <a
+                      key={link.href}
+                      href={link.href}
+                      className={`px-8 py-4 text-base font-medium transition-colors duration-200 hover:bg-primary hover:text-white ${
+                          currentRoute === link.href ? 'bg-primary text-white' : ''
+                      }`}
+                  >
+                      {link.label}
+                  </a>
+              ))}
+          </div>
+      </nav>
+
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden bg-white shadow-lg absolute top-20 left-0 right-0">
