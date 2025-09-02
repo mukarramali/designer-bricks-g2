@@ -39,7 +39,7 @@ const App: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Header currentRoute={route} />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow pt-20 lg:pt-36">
         {renderPage()}
       </main>
       <Footer />

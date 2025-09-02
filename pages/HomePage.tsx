@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ContactButton } from '../components/ContactButton';
 import { REASONS_TO_LOVE_US, REVIEWS, INSTAGRAM_URL } from '../constants';
@@ -55,7 +56,7 @@ const HomePage: React.FC = () => {
 
 const HeroSection: React.FC = () => (
     <section className="h-[80vh] bg-white">
-        <div className="container mx-auto h-full px-0">
+        <div className="w-full h-full">
             <div className="grid grid-cols-1 md:grid-cols-2 h-full">
                 <div className="h-full bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/800/900')" }}>
                     {/* Image part */}
