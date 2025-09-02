@@ -43,3 +43,83 @@ export const QuoteIcon: React.FC<{ className?: string }> = ({ className = "w-16 
         <path d="M22.84,1A8.16,8.16,0,0,0,14.68,9.16V23.84A8.16,8.16,0,0,0,22.84,32h8.68V16.23H22.84V9.16h8.68V1Z" />
     </svg>
 );
+
+const IconBase: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+    {children}
+  </svg>
+);
+
+export const ArchitectureIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6M9 11.25h6M9 15.75h6" />
+  </IconBase>
+);
+
+export const ConstructionIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4-2.4 3 3 0 00-1.128-5.78 2.25 2.25 0 012.4-2.4 3 3 0 005.78-1.128 2.25 2.25 0 012.4 2.4 3 3 0 001.128 5.78 2.25 2.25 0 01-2.4 2.4 3 3 0 00-5.78 1.128zM15.75 5.25v2.25l1.5 1.5v2.25l1.5 1.5v2.25l1.5 1.5V21h-2.25v-2.25l-1.5-1.5V15l-1.5-1.5V9l-1.5-1.5V5.25h2.25z" />
+  </IconBase>
+);
+
+export const ZeroSurprisesIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+  </IconBase>
+);
+
+export const LookBookIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+  </IconBase>
+);
+
+export const AppIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18h3" />
+  </IconBase>
+);
+
+export const AccountabilityIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.092 1.21-.138 2.43-.138 3.662s.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.092-1.21.138-2.43.138-3.662z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 12v-1.5a3 3 0 013-3h.015M12 12v-1.5a3 3 0 00-3-3H8.985M12 12v4.5A1.5 1.5 0 0110.5 18h-3a1.5 1.5 0 01-1.5-1.5v-4.5M12 12h4.5a1.5 1.5 0 011.5 1.5v3a1.5 1.5 0 01-1.5 1.5h-4.5" />
+  </IconBase>
+);
+
+export const ScopeIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  </IconBase>
+);
+
+export const PriceIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-1.5h5.25m-5.25 0h5.25m0 0h5.25m-5.25 0h5.25M3.75 6H7.5v3.75H3.75V6zM3.75 14.25H7.5v3.75H3.75v-3.75z" />
+  </IconBase>
+);
+
+export const ComfortIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5-1.5-.5M5.25 6.364l7.5 2.727M21 9.75l-4.5-1.636M16.5 3.5l-1.5.5" />
+  </IconBase>
+);
+
+export const TeamIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.952a4.5 4.5 0 015.654 0M12 10.5h.008v.008H12v-.008zM12 15a2.25 2.25 0 01-2.25-2.25c0-1.172.69-2.159 1.67-2.61a3.75 3.75 0 114.16 0c.98.45 1.67 1.438 1.67 2.61A2.25 2.25 0 0112 15z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 4.5a4.5 4.5 0 00-4.5-4.5V12a4.5 4.5 0 004.5 4.5z" />
+  </IconBase>
+);
+
+export const HandoverChecklistIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </IconBase>
+);
+
+export const WarrantyIcon: React.FC<{ className?: string }> = ({ className }) => (
+  <IconBase className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </IconBase>
+);

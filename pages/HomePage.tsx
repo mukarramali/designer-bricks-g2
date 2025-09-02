@@ -1,8 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ContactButton } from '../components/ContactButton';
 import { REASONS_TO_LOVE_US, REVIEWS, INSTAGRAM_URL } from '../constants';
-import { CheckCircleIcon, QuoteIcon } from '../components/icons';
+import {
+    CheckCircleIcon, QuoteIcon, ArchitectureIcon, ConstructionIcon, ZeroSurprisesIcon,
+    LookBookIcon, AppIcon, AccountabilityIcon, ScopeIcon, PriceIcon,
+    ComfortIcon, TeamIcon, HandoverChecklistIcon, WarrantyIcon
+} from '../components/icons';
 
 const HomePage: React.FC = () => {
   return (
@@ -126,22 +130,56 @@ const ProjectsHighlightSection: React.FC = () => {
     );
 };
 
-const ReasonsSection: React.FC = () => (
-    <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-black">12 Reasons Why You Will Love Us</h2>
-            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {REASONS_TO_LOVE_US.slice(0, 6).map((reason, index) => (
-                    <div key={index} className="p-6">
-                        <CheckCircleIcon className="w-8 h-8 text-primary" />
-                        <h3 className="mt-4 font-bold text-lg text-black">{reason.title}</h3>
-                        <p className="mt-2 text-gray-600">{reason.description}</p>
+const getReasonIcon = (title: string, className: string) => {
+    switch (title) {
+        case "Best-in-class architecture": return <ArchitectureIcon className={className} />;
+        case "Superior quality construction": return <ConstructionIcon className={className} />;
+        case "Zero surprises": return <ZeroSurprisesIcon className={className} />;
+        case "LookBooks by DesignerBricks": return <LookBookIcon className={className} />;
+        case "DesignerBricks App": return <AppIcon className={className} />;
+        case "Single point of accountability": return <AccountabilityIcon className={className} />;
+        case "Detailed scope of work": return <ScopeIcon className={className} />;
+        case "Premium homes at fair prices": return <PriceIcon className={className} />;
+        case "Homes for comfort & longevity": return <ComfortIcon className={className} />;
+        case "150+ full-time employees": return <TeamIcon className={className} />;
+        case "Handover checklist": return <HandoverChecklistIcon className={className} />;
+        case "Genuine warranty": return <WarrantyIcon className={className} />;
+        default: return <CheckCircleIcon className={className} />;
+    }
+};
+
+const ReasonsSection: React.FC = () => {
+    const [showAll, setShowAll] = useState(false);
+    const reasonsToShow = showAll ? REASONS_TO_LOVE_US : REASONS_TO_LOVE_US.slice(0, 8);
+
+    return (
+        <section className="py-16 md:py-24 bg-white">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-black">12 Reasons Why You Will Love Us</h2>
+                <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12">
+                    {reasonsToShow.map((reason) => (
+                        <div key={reason.title} className="text-center">
+                            <div className="w-20 h-20 mx-auto flex items-center justify-center bg-gray-100 rounded-full">
+                                {getReasonIcon(reason.title, "w-10 h-10 text-primary")}
+                            </div>
+                            <h3 className="mt-6 font-semibold text-lg text-black">{reason.title}</h3>
+                        </div>
+                    ))}
+                </div>
+                {!showAll && (
+                    <div className="mt-16 text-center">
+                        <button
+                            onClick={() => setShowAll(true)}
+                            className="inline-flex items-center justify-center px-8 py-3 border border-primary text-base font-medium rounded-md text-primary bg-transparent hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-300"
+                        >
+                            Explore All Reasons
+                        </button>
                     </div>
-                ))}
+                )}
             </div>
-        </div>
-    </section>
-);
+        </section>
+    );
+};
 
 const RemoteBuildSection: React.FC = () => (
     <section className="py-16 md:py-24 bg-cover bg-center bg-fixed" style={{ backgroundImage: "url('https://picsum.photos/1600/800?random=remote')"}}>
