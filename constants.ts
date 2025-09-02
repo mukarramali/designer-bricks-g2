@@ -7,9 +7,9 @@ export const LINKEDIN_URL = "https://www.linkedin.com"; // Placeholder
 
 export const NAV_LINKS = [
   { href: '#/', label: 'Home' },
-  { href: '#/services', label: 'Services' },
-  { href: '#/projects', label: 'Projects' },
-  { href: '#/contact', label: 'Contact' },
+  { href: '#/services', label: 'Turnkey' },
+  { href: '#/projects', label: 'Our Projects' },
+  { href: '#/contact', label: 'Contact Us' },
 ];
 
 export const REASONS_TO_LOVE_US = [
@@ -67,17 +67,17 @@ export const REASONS_TO_LOVE_US = [
 export const REVIEWS = [
     {
         name: "Mr. Joginder Pal",
-        quote: "The transparency and professionalism from DesignerBricks were outstanding. They delivered beyond our expectations, creating a home that is both beautiful and built to last. The entire process was seamless.",
+        quote: "It has been a great experience dealing with professionals who have structured and handled the entire Home making process beautifully & made it a smooth experience for us Owners.",
         avatarUrl: "https://picsum.photos/100/100?random=1"
     },
     {
         name: "Mr. Ratnakar Singh",
-        quote: "Building our dream home felt effortless with their team. The quality of construction and the minute attention to detail are second to none. We are incredibly happy with the final result.",
+        quote: "Even as a new buyer who was not involved in the whole construction, I found the quality was consistent with the specification conveyed to us. The team is highly professional and courteous.",
         avatarUrl: "https://picsum.photos/100/100?random=2"
     },
     {
         name: "Mrs. Vijaya Makkar",
-        quote: "As a remote client, I was always kept in the loop with regular updates and video tours. The team's communication was excellent. The final result is a beautiful, well-built home we cherish.",
+        quote: "From signing the deal to design approvals to payments etc. till date everything has gone smoothly & tension free for me. It feels like family & we feel safe & secured in their hands.",
         avatarUrl: "https://picsum.photos/100/100?random=3"
     }
 ];

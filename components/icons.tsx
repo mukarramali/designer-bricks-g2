@@ -36,3 +36,10 @@ export const CheckCircleIcon: React.FC<{ className?: string }> = ({ className = 
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>
 );
+
+export const QuoteIcon: React.FC<{ className?: string }> = ({ className = "w-16 h-16" }) => (
+    <svg className={className} fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M9.16,1A8.16,8.16,0,0,0,1,9.16V23.84A8.16,8.16,0,0,0,9.16,32h8.68V16.23H9.16V9.16h8.68V1Z" />
+        <path d="M22.84,1A8.16,8.16,0,0,0,14.68,9.16V23.84A8.16,8.16,0,0,0,22.84,32h8.68V16.23H22.84V9.16h8.68V1Z" />
+    </svg>
+);
