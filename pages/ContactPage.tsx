@@ -6,7 +6,7 @@ const Toast: React.FC<{ message: string; show: boolean; onClose: () => void }> =
     if (!show) return null;
   
     return (
-      <div className="fixed bottom-5 right-5 bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg animate-fade-in-out">
+      <div className="fixed bottom-5 right-5 bg-primary text-white py-3 px-6 rounded-lg shadow-lg animate-fade-in-out">
         <span>{message}</span>
         <button onClick={onClose} className="ml-4 font-bold">X</button>
         <style>{`
@@ -59,7 +59,7 @@ const ContactPage: React.FC = () => {
     }
   };
   
-  const inputStyles = "mt-1 block w-full bg-transparent px-1 py-2 border-b-2 border-gray-300 focus:outline-none focus:ring-0 focus:border-black";
+  const inputStyles = "mt-1 block w-full bg-transparent px-1 py-2 border-b-2 border-gray-500 focus:outline-none focus:ring-0 focus:border-primary";
 
   return (
     <>
@@ -67,17 +67,17 @@ const ContactPage: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="lg:pr-8">
-              <h1 className="text-4xl md:text-5xl font-extrabold text-black">Contact DesignerBricks</h1>
+              <h1 className="text-4xl md:text-5xl font-extrabold text-primary">Contact DesignerBricks</h1>
               <p className="mt-4 text-lg text-gray-700">
                 Ready to start your dream project? Have a question for our team? Reach out to us, and we'll get back to you promptly.
               </p>
               <div className="mt-8 space-y-4">
                 <a href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`} className="flex items-center text-lg font-medium text-gray-800 hover:text-black">
-                   <svg className="w-6 h-6 mr-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                   <svg className="w-6 h-6 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                   {PHONE_NUMBER}
                 </a>
                  <a href={`mailto:${EMAIL_ADDRESS}`} className="flex items-center text-lg font-medium text-gray-800 hover:text-black">
-                  <svg className="w-6 h-6 mr-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  <svg className="w-6 h-6 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                   {EMAIL_ADDRESS}
                 </a>
               </div>
@@ -87,7 +87,7 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
             
-            <div className="bg-gray-50 p-8 rounded-lg border border-gray-200">
+            <div className="bg-accent p-8 rounded-lg">
               <form onSubmit={handleSubmit} noValidate>
                 <div className="space-y-6">
                   <div>
@@ -111,7 +111,7 @@ const ContactPage: React.FC = () => {
                     {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
                   </div>
                   <div>
-                    <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black">
+                    <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
                       Send Message
                     </button>
                   </div>

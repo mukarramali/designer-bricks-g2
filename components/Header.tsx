@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ currentRoute }) => {
               <a 
                 key={link.href} 
                 href={link.href} 
-                className={`text-base transition-colors ${currentRoute === link.href ? 'text-black font-semibold' : 'text-gray-500 hover:text-black'}`}
+                className={`text-base transition-colors ${currentRoute === link.href ? 'text-primary font-semibold' : 'text-gray-500 hover:text-primary'}`}
               >
                 {link.label}
               </a>
@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ currentRoute }) => {
               <a 
                 key={link.href} 
                 href={link.href} 
-                className={`text-lg ${currentRoute === link.href ? 'text-black font-semibold' : 'text-gray-700 hover:text-black'}`}
+                className={`text-lg ${currentRoute === link.href ? 'text-primary font-semibold' : 'text-gray-700 hover:text-primary'}`}
               >
                 {link.label}
               </a>

@@ -30,7 +30,7 @@ const ProjectsPage: React.FC = () => {
     <div className="min-h-full bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-black">Our Projects</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-primary">Our Projects</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
             A glimpse into the quality, craftsmanship, and aesthetic of the homes we build.
             </p>
@@ -40,7 +40,7 @@ const ProjectsPage: React.FC = () => {
           <button
             onClick={() => setActiveFilter('All')}
             className={`px-1 py-2 text-base font-medium transition-colors duration-300 ${
-              activeFilter === 'All' ? 'text-black border-b-2 border-black' : 'text-gray-500 hover:text-black'
+              activeFilter === 'All' ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-primary'
             }`}
           >
             All
@@ -50,7 +50,7 @@ const ProjectsPage: React.FC = () => {
               key={chip}
               onClick={() => setActiveFilter(chip)}
               className={`px-1 py-2 text-base font-medium transition-colors duration-300 ${
-                activeFilter === chip ? 'text-black border-b-2 border-black' : 'text-gray-500 hover:text-black'
+                activeFilter === chip ? 'text-primary border-b-2 border-primary' : 'text-gray-500 hover:text-primary'
               }`}
             >
               {chip}

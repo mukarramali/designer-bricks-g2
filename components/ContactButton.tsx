@@ -10,7 +10,7 @@ export const ContactButton: React.FC<ContactButtonProps> = ({ variant = 'primary
   const baseClasses = "inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors duration-300";
 
   const styles = {
-    primary: "text-white bg-whatsapp hover:bg-green-600 focus:ring-whatsapp",
+    primary: "text-white bg-primary hover:opacity-90 focus:ring-primary",
     secondary: "text-white bg-black hover:bg-gray-800 focus:ring-black"
   };
 

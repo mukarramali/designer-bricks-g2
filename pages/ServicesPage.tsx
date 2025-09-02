@@ -6,7 +6,7 @@ const ServicesPage: React.FC = () => {
     <div className="bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-black">Our Services</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-primary">Our Services</h1>
             <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
               Comprehensive solutions for your home building needs, from concept to completion.
             </p>
@@ -62,12 +62,12 @@ const ServiceSection: React.FC<ServiceSectionProps> = ({ title, imageUrl, descri
         <img src={imageUrl} alt={title} className="rounded-lg w-full h-auto object-cover shadow-lg" loading="lazy" />
       </div>
       <div className={`order-2 ${reverse ? 'lg:order-1' : 'lg:order-2'}`}>
-        <h2 className="text-3xl font-bold text-black">{title}</h2>
+        <h2 className="text-3xl font-bold text-primary">{title}</h2>
         <p className="mt-4 text-gray-700">{description}</p>
         <ul className="mt-6 space-y-3">
           {points.map((point, index) => (
             <li key={index} className="flex items-start">
-              <svg className="w-5 h-5 mr-3 mt-1 text-black flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+              <svg className="w-5 h-5 mr-3 mt-1 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
               <span>{point}</span>
             </li>
           ))}
